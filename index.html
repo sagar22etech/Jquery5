@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Slider</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="./fancybox/source/helpers/jquery.fancybox-buttons.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="./fancybox/source/helpers/jquery.fancybox-thumbs.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="./nivoslider/themes/default/default.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="./nivoslider/nivo-slider.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="./jbzoom/jbzoom-style.css">
+  </head>
+  <body>
+    <div class="box">
+        <h1>Fancy Box</h1>
+        <a class="fancybox" rel="group" href="./fancybox/demo/1_b.jpg"><img src="./fancybox/demo/1_s.jpg" alt="" /></a>
+        <a class="fancybox" rel="group" href="./fancybox/demo/2_b.jpg"><img src="./fancybox/demo/2_s.jpg" alt="" /></a>
+        <a class="fancybox" rel="group" href="./fancybox/demo/3_b.jpg"><img src="./fancybox/demo/3_s.jpg" alt="" /></a>
+        <a class="fancybox" rel="group" href="./fancybox/demo/4_b.jpg"><img src="./fancybox/demo/4_s.jpg" alt="" /></a>
+        <a class="fancybox" rel="group" href="./fancybox/demo/5_b.jpg"><img src="./fancybox/demo/5_s.jpg" alt="" /></a>
+    </div>
+    <div class="box">
+        <h1>Nivo Slider</h1>
+        <div id="slider" class="nivoSlider theme-default">
+            <img src="./nivoslider/demo/images/toystory.jpg" data-thumb="./nivoslider/demoimages/toystory.jpg" alt="" />
+            <img src="./nivoslider/demo/images/up.jpg" data-thumb="./nivoslider/demoimages/up.jpg" alt="" title="This is an example of a caption" />
+            <img src="./nivoslider/demo/images/walle.jpg" data-thumb="./nivoslider/demoimages/walle.jpg" alt="" data-transition="slideInLeft" />
+            <img src="./nivoslider/demo/images/nemo.jpg" data-thumb="./nivoslider/demoimages/nemo.jpg" alt="" title="#htmlcaption" />
+        </div>
+    </div>
+    <div class="box">
+      <h1>JQ ZooM</h1>
+      <div class="bzoom_wrap">
+        <ul id="bzoom">
+            <li>
+                <img class="bzoom_thumb_image" src="./img/image1.png" title="first img" />
+                <img class="bzoom_big_image" src="./img/image1b.jpg"/>
+            </li>
+            <li>
+                <img class="bzoom_thumb_image" src="./img/image2.png"/>
+                <img class="bzoom_big_image" src="./img/image2b.jpg"/>
+            </li>
+            <li>
+                <img class="bzoom_thumb_image" src="./img/image3.png"/>
+                <img class="bzoom_big_image" src="./img/image3b.jpg"/>
+            </li>
+            <li>
+                <img class="bzoom_thumb_image" src="./img/image4.png"/>
+                <img class="bzoom_big_image" src="./img/image4b.jpg"/>
+            </li>
+        </ul>
+    </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script type="text/javascript" src="./fancybox/lib/jquery.mousewheel.pack.js"></script>
+  <script type="text/javascript" src="./fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="./fancybox/source/helpers/jquery.fancybox-buttons.js"></script>
+  <script type="text/javascript" src="./fancybox/source/helpers/jquery.fancybox-media.js"></script>
+  <script type="text/javascript" src="./fancybox/source/helpers/jquery.fancybox-thumbs.js"></script>
+  <script type="text/javascript" src="./nivoslider/jquery.nivo.slider.js"></script>
+  <script src="./jbzoom/jqzoom.js"></script>
+  <script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+    $('#slider').nivoSlider();
+    $("#bzoom").zoom({
+        zoom_area_width: 300,
+        autoplay_interval :3000,
+        small_thumbs : 4,
+        autoplay : false
+      });
+  	});
+  </script>
+</html>
